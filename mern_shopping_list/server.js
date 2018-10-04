@@ -18,6 +18,13 @@ mongoose
   .then(()=> console.log('MongoDB Connected.... stand up and shout'))
   .catch(err => console.log(err));
 
+//Deal with the DepricationWarning  -nw found on google
+mongoose.connect('url', { useNewUrlParser: true }, (err, res) => {
+  if (err) throw err;
+  console.log('Database online thanks to googlers');
+  });
+
+  
 //Use Routes
 app.use('/api/items', items);
 
