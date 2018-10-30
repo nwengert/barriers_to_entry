@@ -1,6 +1,9 @@
 {
   "name": "mern_shopping_list",
   "version": "1.0.0",
+  "engines": {
+    "node": "8.11.2"
+  },
   "description": "Shopping list build with the MERN stack",
   "main": "server.js",
   "scripts": {
@@ -9,7 +12,7 @@
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false  npm install --prefix client && npm run build --prefix client"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "author": "Nathan Wengert",
   "license": "ISC",
@@ -21,5 +24,6 @@
   },
   "devDependencies": {
     "nodemon": "^1.18.4"
-  }
+  },
+  "keywords": []
 }
