@@ -173,6 +173,9 @@ body {
   outline: none;
   color:#fff;
   }
+  .delete:hover{
+    background-color: red;
+  }
   
   
   button {
@@ -191,5 +194,5 @@ body {
   color:#fff;
   }
   .edit:hover {
-    font-size: 22px;
+    background-color: blue;
   }
