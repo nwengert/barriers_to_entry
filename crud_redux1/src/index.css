@@ -67,7 +67,6 @@ body {
   color:#636363;
   }
   
-  
   .form {
   display:flex;
   flex-direction: column;
@@ -125,6 +124,9 @@ body {
   padding:30px;
   margin-bottom:20px;
   box-shadow: 10px 10px 12px 0 rgba(46, 60, 73, 0.05);
+
+  animation-name: moveInRight;
+  animation-duration: 0.8s;
   }
   
   
@@ -196,3 +198,17 @@ body {
   .edit:hover {
     background-color: blue;
   }
+
+  @keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(200px);
+    }
+    88% {
+        transform: translateX(-24px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
