@@ -1,10 +1,10 @@
-import React from "react"
-import TodoItem from "./TodoItem"
-import todosData from "./todosData"
+import React, { Component } from 'react'
+import TodoItem from './TodoItem'
+import todosData from './todosData'
 
-class App extends React.Component {
+export default class Appp extends Component {
     constructor() {
-        super()
+        super() 
         this.state = {
             todos: todosData
         }
@@ -13,7 +13,7 @@ class App extends React.Component {
     handleChange(id) {
         this.setState(prevState => {
             const updatedTodos = prevState.todos.map(todo => {
-                if (todo.id === id) {
+                if (todo.id === id){
                     todo.completed = !todo.completed
                 }
                 return todo
@@ -23,16 +23,12 @@ class App extends React.Component {
             }
         })
     }
-    
     render() {
         const todoItems = this.state.todos.map(item => <TodoItem key={item.id} item={item} handleChange={this.handleChange}/>)
-        
-        return (
-            <div className="todo-list">
+        return(
+            <div className='todo-list'>
                 {todoItems}
             </div>
-        )    
+        )
     }
 }
-
-export default App
