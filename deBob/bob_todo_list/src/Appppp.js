@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Todoitem from './TodoItem'
+import TodoItem from './TodoItem'
 import todosData from './todosData'
 
 export default class Appppp extends Component {
@@ -10,10 +10,25 @@ export default class Appppp extends Component {
         }
         this.handleChange = this.handleChange.bind(this)
     }
-    handleChange() {
-
+    handleChange(id) {
+        this.setState(prevState => {
+            const updatedTodos = prevState.todos.map(todo => {
+                if(todo.id === id) {
+                    todo.completed = !todo.completed
+                }
+                return todo
+            })
+            return {
+                todos: updatedTodos
+            }
+        })
     }
     render() {
-        
+        const todoItem = this.state.todos.map(item => <TodoItem key={item.key} item={item} handleChange={this.handleChange}/>)
+        return(
+            <div className='todo-list'>
+                {todoItem}
+            </div>
+        )
     }
 }

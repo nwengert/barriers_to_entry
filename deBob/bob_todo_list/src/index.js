@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
 
-import Apppp from './Apppp';
+import Appppp from './Appppp';
 import './styles.css'
 
-ReactDOM.render(<Apppp />, document.getElementById("root"))
+ReactDOM.render(<Appppp />, document.getElementById("root"))
